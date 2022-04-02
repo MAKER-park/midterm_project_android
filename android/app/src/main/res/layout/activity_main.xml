@@ -11,58 +11,48 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="416dp">
+        android:layout_height="350dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="416dp"
-            android:layout_height="416dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:padding="100dp"
-            tools:srcCompat="@tools:sample/avatars"
             android:visibility="visible"
-            />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="416dp"
-            android:layout_height="416dp"
-            android:padding="100dp"
-            tools:srcCompat="@tools:sample/avatars"
-            android:visibility="invisible"
-            />
-
+            tools:srcCompat="@drawable/off" />
     </FrameLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="100sp"
+        android:gravity="center"
+        android:text="ON" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="current temperature : "
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:fontFamily="sans-serif-black"
-            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="80sp"
-            android:text="50 C"
+            android:text=" "
+            android:layout_gravity="center"
             />
     </LinearLayout>
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:text="Open control"
+        android:layout_gravity="center"
         android:background="@drawable/project_button_shape"
         android:clickable="true"
-        />
+        android:text="Open control" />
 </LinearLayout>

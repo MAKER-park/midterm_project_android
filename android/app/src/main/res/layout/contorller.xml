@@ -8,24 +8,22 @@
     android:background="@color/project_color"
     android:orientation="vertical">
 
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="180dp"/>
-
-
-    <com.github.angads25.toggle.widget.LabeledSwitch
+    <ImageButton
         android:id="@+id/switch_id1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textSize="14sp"
-        app:on="false"
-        app:colorBorder="@color/project_color_button"
-        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:src="@drawable/on"
+        android:background="#00ffffff"
         />
 
+    <TextView
+        android:id="@+id/current_state_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ON"
+        android:textSize="100sp"
+        android:gravity="center"
+        />
 
 
 

@@ -24,25 +24,5 @@ public class BoilerController {
 	public void getMemberRegistry() {
 		
 	}
-	@PostMapping("/boiler/boilerRegistry")
-	public String postMemberRegistry(Member member) {
-		
-		mapper.insertMember(member.getUserid(), member.getUsername(), member.getAge());
-		return "redirect:/boiler/boilerList";
-		//return "redirect://www.naver.com";//이러면 네이버로 감
-	}
-//	
-//	@GetMapping("/boiler/memberRegistry1")
-//	public String getMemberRegistry1(Member member) {
-//		
-//		mapper.insertMember(member.getUserid(), member.getUsername(), member.getAge());
-//		return "redirect:/boiler/memberList";				
-////		return "redirect:/member/memberList";
-//		
-//	}
-//	
-//	
-//	
-
 
 }

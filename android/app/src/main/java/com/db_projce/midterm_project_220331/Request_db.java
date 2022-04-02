@@ -2,20 +2,19 @@ package com.db_projce.midterm_project_220331;
 
 public class Request_db {
 
-    //DB 맞춰서 수정 하면 됩니다.
+    //DB 맞춰서 수정 하면 됩니다. -> 우선 수정 해둠
 
-    private String userid;
-    private String username;
-    private int age;
+    private String time;
+    private int temp;
+    private String status;
     public String getUserid(){
-        return userid;
+        return time;
     }
-    public String getUsername(){
-        return username;
+    public int getUsername(){
+        return temp;
     }
-
-    public int getAge(){
-        return age;
+    public String getAge(){
+        return status;
     }
 
 

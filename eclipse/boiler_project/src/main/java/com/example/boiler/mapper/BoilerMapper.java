@@ -13,16 +13,15 @@ import com.example.boiler.test.entity.Member;
 @Mapper
 public interface BoilerMapper {
 	
-	@Select("select userid, username, age from tbl_test order by userid desc")
+	@Select("select TIME, TEMP, STATUS from project_table order by TIME ASC")
 	public List<Member> selectMemberList();
 	
-	@Insert("insert into tbl_test (userid, username, age) values (\'${userid}\', \'${username}\', \'${age}\')")
-	public void insertMember(@Param("userid") String userid,
-			@Param("username") String username, @Param("age") int age );
+//	@Insert("insert into tbl_test (userid, username, age) values (\'${userid}\', \'${username}\', \'${age}\')")
+//	public void insertMember(@Param("userid") String userid,
+//			@Param("username") String username, @Param("age") int age );
 	
-	@Update("update tbl_test set age = ${age} where userid=\'${userid}\'")
-	public void updateMember(@Param("age") int age , @Param("userid") String userid);
-
-
+	//@Update("update tbl_test set age = ${age} where userid=\'${userid}\'")
+	@Update("update project_table set STATUS = replace(STATUS, \'${current_status}\' , \'${status}\' )")
+	public void updateMember(@Param("current_status") String current_status  , @Param("status") String status);
 	
 }
