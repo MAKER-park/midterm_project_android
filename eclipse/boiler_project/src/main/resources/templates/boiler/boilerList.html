@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html xmlns:"http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
+	<title>Table V05</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 <title>보일러 관리 페이지</title>
 </head>
 <body>
-
-<h1> 보일러 목록 보기</h1>
-
-<h1> 보일러 ID: 8305</h1>
 <style>
   table, tr, td {
     border: 1px solid #bcbcbc;
@@ -19,18 +33,62 @@
     float: center;
   }
 </style>
-<table>
-<tr>
-	<td>시간 </td> <td>온도 측정</td> <td>보일러 상태</td>
-</tr>
-<tbody>
-<tr th:each="list:${list}">
-<td><span th:text="${list.time}"></span></td>
-<td><span th:text="${list.temp}"></span></td>
-<td><span th:text="${list.status}"></span></td>
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100 ver1">
+        <div class="table100-firstcol">
+          <table>
+            <thead>
+              <tr class="row100 head">
+                <td class="cell100 column1">시간 </td> <td class="cell100 column1"> 온도 측정</td> <td class="cell100 column1">보일러 상태</td>
+              </tr>
+              <tbody>
+              <tr th:each="list:${list}">
+              <td class="cell100 column2"><span th:text="${list.time}"></span></td>
+              <td class="cell100 column2"><span th:text="${list.temp}"></span></td>
+              <td class="cell100 column2"><span th:text="${list.status}"></span></td>
+              </tr>
+              </tbody>
+            </thead>
+          </table>
+        </div>
 
-</tbody>
 </table>
+
+<!--===============================================================================================-->	
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+
+			$(this).on('ps-x-reach-start', function(){
+				$(this).parent().find('.table100-firstcol').removeClass('shadow-table100-firstcol');
+			});
+
+			$(this).on('ps-scroll-x', function(){
+				$(this).parent().find('.table100-firstcol').addClass('shadow-table100-firstcol');
+			});
+
+		});
+
+		
+		
+		
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
 
 </body>
 
