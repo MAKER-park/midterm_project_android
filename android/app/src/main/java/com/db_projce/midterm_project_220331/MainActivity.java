@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView image_id1 = null;
     TextView text_id1 = null;
     TextView text_id2 = null;
+    ImageButton image_id2 = null;
 
     static  int temp = 0, index = 0; //db 온도값 , index 선택인자
     static String status = null;
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         text_id1 = findViewById(R.id.textView1);
         text_id2 = findViewById(R.id.textView2);
         image_id1 = findViewById(R.id.imageView);
+        image_id2 = findViewById(R.id.image_Button);
 
 
         Handler text_changer = new Handler() {
@@ -81,6 +84,16 @@ public class MainActivity extends AppCompatActivity {
                 //누르면 contorller_pannel로 이동
             }
         });
+
+        image_id2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("click!!");
+                Intent intent2 = new Intent(MainActivity.this,loginAcitvity.class);
+                startActivity(intent2);
+            }
+        });
+
 
         //타이머 자식 쓰레드 생성 -- db 구문 업데이트 기능 쓰레드
         Timer timer = new Timer();

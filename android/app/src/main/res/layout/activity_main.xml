@@ -20,6 +20,15 @@
             android:padding="100dp"
             android:visibility="visible"
             tools:srcCompat="@drawable/off" />
+
+        <ImageButton
+            android:id="@+id/image_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:scaleType="centerCrop"
+            android:src="@drawable/setting" />
+
     </FrameLayout>
     <TextView
         android:id="@+id/textView2"

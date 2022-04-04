@@ -27,6 +27,14 @@
             android:name=".contorller"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".loginAcitvity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".db_update_activity"
+            android:exported="false">
+        </activity>
     </application>
 
 </manifest>

@@ -9,7 +9,7 @@ public class Member {
 	//------custom type --------
 	
 	private String time;
-	private int temp;
+	private int tmep;
 	private String status;//바꿀떄 들어올 DB 값
 	private String current_status;//현재 DB 저장값
 	
@@ -42,10 +42,10 @@ public class Member {
 		this.status = status;
 	}
 	public int getTemp() {
-		return temp;
+		return tmep;
 	}
-	public void setTemp(int temp) {
-		this.temp = temp;
+	public void setTemp(int tmep) {
+		this.tmep = tmep;
 	}
 	public String getTime() {
 		return time;

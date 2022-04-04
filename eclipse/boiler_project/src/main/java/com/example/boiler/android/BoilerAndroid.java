@@ -29,5 +29,12 @@ public class BoilerAndroid {
 	void getUpdateAge(@PathVariable("current_status")String current_status, @PathVariable("status")String status) { //db에 있는 데이터값 바꾸기
 		mapper.updateMember(current_status, status);
 	}
+	
+		
+		@GetMapping("/android/updatetemp/{time}&{temp}")
+		void getUpdateTemp(@PathVariable("time")String time, @PathVariable("temp")int temp) { //db에 있는 데이터값 바꾸기
+			mapper.updateTemp(temp, time);
+	}
+
 
 }
