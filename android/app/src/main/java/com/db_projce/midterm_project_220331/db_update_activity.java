@@ -44,7 +44,6 @@ public class db_update_activity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> time_set, View view, int postion, long id) {
                 time = time_set.getItemAtPosition(postion).toString();
-                System.out.println("time_set : " + time);
                 text_id4.setText(time_set.getItemAtPosition(postion).toString());
             }
 
@@ -58,7 +57,6 @@ public class db_update_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 temp = ed_id4.getText().toString();
-                System.out.println("temp!!!!!!!!!!!!!!!! : " + temp);
 
                 Thread thread = new Thread(new Runnable() {
                     @Override
