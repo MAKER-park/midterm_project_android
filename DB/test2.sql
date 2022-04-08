@@ -1,0 +1,1 @@
+INSERT INTO tbl_test(userid, username, age) VALUES('gkgkgk', '김창식', 40)
